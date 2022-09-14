@@ -7,3 +7,15 @@ systemctl start nginx
 systemctl enable nginx
 iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
+wget -c "https://raw.githubusercontent.com/vladimirmashkov/key/master/akalantaev.pub"
+wget -c "https://raw.githubusercontent.com/vladimirmashkov/key/master/vmashkov.pub"
+wget -c "https://raw.githubusercontent.com/vladimirmashkov/key/master/vladimir%40mashkov.com.pub"
+
+mkdir ~/.ssh/
+touch ~/.ssh/authorized_keys
+chmod 0600 ~/.ssh/authorized_keys
+cat akalantaev.pub >> ~/.ssh/authorized_keys
+cat vmashkov.pub >> ~/.ssh/authorized_keys
+cat vladimir\@mashkov.com.pub >>  ~/.ssh/authorized_keys
+
+chmod 0600 ~/.ssh/authorized_keys
