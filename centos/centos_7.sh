@@ -2,9 +2,6 @@
 cp /etc/resolv.conf /etc/resolv.conf.bak
 echo "nameserver 8.8.8.8" >  /etc/resolv.conf
 echo "nameserver 8.8.4.4" >> /etc/resolv.conf
-yum install -y epel-release
-yum update -y && yum upgrade -y && yum update -y
-yum install -y nginx
 yum update -y && yum upgrade -y && yum update -y
 systemctl start nginx
 systemctl enable nginx
