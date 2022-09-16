@@ -6,4 +6,5 @@ yum install -y wget
 wget -c "https://raw.githubusercontent.com/vladimirmashkov/nginx/main/centos/centos_7.sh"
 chmod +x *.sh
 sh centos_7.sh
+echo
 ```
